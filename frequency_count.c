@@ -44,7 +44,7 @@
 
 // In ESP-IDF v4.1-beta1 (and presumably newer), the macro RMT_MEM_BLOCK_BYTE_NUM has been removed
 #if (ESP_IDF_VERSION_MAJOR == 4)
-# define RMT_MEM_BLOCK_BYTE_NUM ((RMT_CHANNEL_MEM_WORDS) * 4)
+# define RMT_MEM_BLOCK_BYTE_NUM ((SOC_RMT_CHANNEL_MEM_WORDS) * 4)
 #endif
 
 static void init_rmt(uint8_t tx_gpio, rmt_channel_t channel, uint8_t clk_div)
